@@ -17,9 +17,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            
+            for (int i = 0; i < 50; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
+                await Task.Delay(125);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
