@@ -45,5 +45,24 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 6, pictureBox1.Location.Y);
+                await Task.Delay(125);
+            }
+            for (int i = 0; i < 50; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X-3, pictureBox1.Location.Y + 6);
+                await Task.Delay(125);
+            }
+            for (int i = 0; i < 50; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X-3, pictureBox1.Location.Y - 6);
+                await Task.Delay(125);
+            }
+        }
     }
 }
